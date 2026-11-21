@@ -10,4 +10,6 @@ public:
     Triangle(Point a, Point b, Point c);
     Point center() const override;
     double metric() const override;
+    ~Triangle() override = default;
+    bool isEquilateral() const;
 };
