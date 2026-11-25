@@ -22,3 +22,11 @@ double Square::side() const
     double ab = std::sqrt(pow((b_.x_ - a_.x_), 2) + std::pow((b_.y_ - a_.y_), 2));
     return ab;
 }
+
+void Square::print(std::ostream& os) const
+{
+    Point p = center();
+    os << "Square: (" << a_.x_ << ", " << a_.y_ << ") (" << b_.x_ << ", " << b_.y_ << ") (" << c_.x_ << ", " << c_.y_ << ") (" << d_.x_ << ", " << d_.y_ << ")";
+    os << "\nCenter: (" << p.x_ << ", " << p.y_ << ")";
+    os << "\nArea: " << metric();
+}

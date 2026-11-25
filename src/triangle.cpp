@@ -30,3 +30,11 @@ bool Triangle::isEquilateral() const
     }
     return (abs((ab - bc)) < eps && abs((ab - ac)) < eps && abs((bc - ac)) < eps);
 }
+
+void Triangle::print(std::ostream& os) const
+{
+    Point p = center();
+    os << "Triangle: (" << a_.x_ << ", " << a_.y_ << ") (" << b_.x_ << ", " << b_.y_ << ") (" << c_.x_ << ", " << c_.y_ << ")";
+    os << "\nCenter: (" << p.x_ << ", " << p.y_ << ")";
+    os << "\nArea: " << metric();
+}

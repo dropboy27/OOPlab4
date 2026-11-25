@@ -12,4 +12,5 @@ public:
     double metric() const override;
     ~Triangle() override = default;
     bool isEquilateral() const;
+    void print(std::ostream&) const override;
 };

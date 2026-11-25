@@ -85,3 +85,11 @@ bool Pentagon::isRegular() const
 
     return true;
 }
+
+void Pentagon::print(std::ostream& os) const
+{
+    Point p = center();
+    os << "Pentagon: (" << a_.x_ << ", " << a_.y_ << ") (" << b_.x_ << ", " << b_.y_ << ") (" << c_.x_ << ", " << c_.y_ << ") (" << d_.x_ << ", " << d_.y_ << ") (" << f_.x_ << ", " << f_.y_ << ")";
+    os << "\nCenter: (" << p.x_ << ", " << p.y_ << ")";
+    os << "\nArea: " << metric();
+}

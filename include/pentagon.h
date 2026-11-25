@@ -14,4 +14,5 @@ public:
     Point center() const override;
     ~Pentagon() override = default;
     bool isRegular() const;
+    void print(std::ostream&) const override;
 };

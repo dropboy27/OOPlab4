@@ -13,4 +13,5 @@ public:
     Point center() const override;
     ~Square() override = default;
     double side() const;
+    void print(std::ostream&) const override;
 };
