@@ -38,3 +38,15 @@ void Triangle::print(std::ostream& os) const
     os << "\nCenter: (" << p.x_ << ", " << p.y_ << ")";
     os << "\nArea: " << metric();
 }
+
+void Triangle::read(std::istream& is)
+{
+    Point vertices[3];
+
+    if (readFigureData(is, "Triangle:", vertices, 3))
+    {
+        a_ = vertices[0];
+        b_ = vertices[1];
+        c_ = vertices[2];
+    }
+}

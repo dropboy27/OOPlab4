@@ -14,4 +14,5 @@ public:
     ~Square() override = default;
     double side() const;
     void print(std::ostream&) const override;
+    void read(std::istream& is) override;
 };

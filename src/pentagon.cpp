@@ -93,3 +93,17 @@ void Pentagon::print(std::ostream& os) const
     os << "\nCenter: (" << p.x_ << ", " << p.y_ << ")";
     os << "\nArea: " << metric();
 }
+
+void Pentagon::read(std::istream& is)
+{
+    Point vertices[5];
+
+    if (readFigureData(is, "Pentagon:", vertices, 5))
+    {
+        a_ = vertices[0];
+        b_ = vertices[1];
+        c_ = vertices[2];
+        d_ = vertices[3];
+        f_ = vertices[4];
+    }
+}

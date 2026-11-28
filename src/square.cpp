@@ -30,3 +30,16 @@ void Square::print(std::ostream& os) const
     os << "\nCenter: (" << p.x_ << ", " << p.y_ << ")";
     os << "\nArea: " << metric();
 }
+
+void Square::read(std::istream& is)
+{
+    Point vertices[4];
+
+    if (readFigureData(is, "Square:", vertices, 4))
+    {
+        a_ = vertices[0];
+        b_ = vertices[1];
+        c_ = vertices[2];
+        d_ = vertices[3];
+    }
+}

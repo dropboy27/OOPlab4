@@ -13,4 +13,5 @@ public:
     ~Triangle() override = default;
     bool isEquilateral() const;
     void print(std::ostream&) const override;
+    void read(std::istream& is) override;
 };
