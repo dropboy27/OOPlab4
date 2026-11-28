@@ -16,4 +16,11 @@ public:
     FigureCollection& operator=(const FigureCollection& other);
     FigureCollection(FigureCollection&& other) noexcept;
     FigureCollection& operator=(FigureCollection&& other) noexcept;
+    bool add(Figure* figure);
+    std::size_t size() const;
+    double total_metric() const;
+    Figure* get(std::size_t index);
+    const Figure* get(std::size_t index) const;
+    bool remove(std::size_t index);
+    void swap(FigureCollection& other) noexcept;
 };

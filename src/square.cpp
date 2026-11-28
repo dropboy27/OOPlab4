@@ -43,3 +43,8 @@ void Square::read(std::istream& is)
         d_ = vertices[3];
     }
 }
+
+Figure* Square::clone() const
+{
+    return new Square(*this);
+}

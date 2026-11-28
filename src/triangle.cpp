@@ -50,3 +50,8 @@ void Triangle::read(std::istream& is)
         c_ = vertices[2];
     }
 }
+
+Figure* Triangle::clone() const
+{
+    return new Triangle(*this);
+}

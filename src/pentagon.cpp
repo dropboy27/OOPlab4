@@ -107,3 +107,8 @@ void Pentagon::read(std::istream& is)
         f_ = vertices[4];
     }
 }
+
+Figure* Pentagon::clone() const
+{
+    return new Pentagon(*this);
+}
