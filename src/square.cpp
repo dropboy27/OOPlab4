@@ -3,7 +3,7 @@
 #include "square.h"
 #include <cmath>
 
-Square::Square(): a_{Point(0, 0)}, b_{Point(1, 0)}, c_{Point(0, 1)}, d_{Point(1, 1)} {}
+Square::Square(): a_{Point(0, 0)}, b_{Point(1, 0)}, c_{Point(1, 1)}, d_{Point(0, 1)} {}
 Square::Square(Point a, Point b, Point c, Point d) : a_{a}, b_{b}, c_{c}, d_{d} {}
 double Square::metric() const
 {
